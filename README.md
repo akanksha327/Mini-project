@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SkillNest - E-Learning Platform (React)
 
 A modern, responsive E-Learning web application built with React, featuring role-based access for Admin and Learner users.
@@ -241,3 +242,7 @@ The application uses mock data for demonstration. All CRUD operations work in-me
 
 Built with ❤️ using React and Vite
 # E-Learning-WebSite
+=======
+# Mini-project
+E-learning website
+>>>>>>> 5c0bff9e087f36b4e5acd8b58532787744a088e6
