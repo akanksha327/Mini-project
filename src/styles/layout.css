@@ -131,6 +131,39 @@
   border-right: 3px solid var(--primary-dark);
 }
 
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: var(--dark-bg);
+  }
+  
+  .navbar-link:hover {
+    background-color: var(--light-bg);
+    color: var(--sky-neon);
+  }
+  
+  .navbar-link.active {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+  }
+  
+  .sidebar {
+    background-color: var(--dark-bg);
+    border-right: 1px solid var(--border-color);
+  }
+  
+  .sidebar-link:hover {
+    background-color: var(--light-bg);
+    color: var(--sky-neon);
+  }
+  
+  .sidebar-link.active {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+    border-right: 3px solid var(--sky-neon);
+  }
+}
+
 /* Page Container */
 .page-container {
   flex: 1;

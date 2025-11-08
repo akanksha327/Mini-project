@@ -13,6 +13,7 @@
   --secondary-color: #10b981;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
+  --sky-neon: #00f0ff; /* Sky neon color */
   --dark-bg: #1f2937;
   --light-bg: #f9fafb;
   --border-color: #e5e7eb;
@@ -24,6 +25,78 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-bg: #0f172a;
+    --light-bg: #1e293b;
+    --border-color: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-light: #94a3b8;
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+  }
+  
+  .card {
+    background-color: var(--light-bg);
+  }
+  
+  .form-input {
+    background-color: var(--light-bg);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+  }
+  
+  .btn-outline {
+    border-color: var(--sky-neon);
+    color: var(--sky-neon);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+  }
+  
+  /* Enhanced neon effects for all interactive elements */
+  a {
+    color: var(--sky-neon);
+  }
+  
+  a:hover {
+    color: var(--sky-neon);
+    text-shadow: 0 0 5px var(--sky-neon);
+  }
+  
+  .btn-primary {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--sky-neon);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--sky-neon);
+    box-shadow: 0 0 15px var(--sky-neon);
+  }
+  
+  .btn-secondary {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--sky-neon);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--sky-neon);
+    box-shadow: 0 0 15px var(--sky-neon);
+  }
 }
 
 body {
@@ -140,9 +213,130 @@ img {
   color: var(--white);
 }
 
+/* Dark mode button enhancements */
+@media (prefers-color-scheme: dark) {
+  .btn-primary {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--sky-neon);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--sky-neon);
+    box-shadow: 0 0 15px var(--sky-neon);
+  }
+  
+  .btn-secondary {
+    background-color: var(--sky-neon);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--sky-neon);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--sky-neon);
+    box-shadow: 0 0 15px var(--sky-neon);
+  }
+}
+
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.neon-sky {
+  color: var(--sky-neon);
+  text-shadow: 0 0 5px var(--sky-neon), 0 0 10px var(--sky-neon);
+}
+
+.neon-sky-bg {
+  background-color: var(--sky-neon);
+  box-shadow: 0 0 10px var(--sky-neon), 0 0 20px var(--sky-neon);
+}
+
+/* Enhanced neon effect for dark mode */
+@media (prefers-color-scheme: dark) {
+  .neon-sky {
+    text-shadow: 0 0 5px var(--sky-neon), 0 0 10px var(--sky-neon), 0 0 20px var(--sky-neon);
+  }
+  
+  .neon-sky-bg {
+    box-shadow: 0 0 10px var(--sky-neon), 0 0 20px var(--sky-neon), 0 0 30px var(--sky-neon);
+  }
+}
+
+/* Additional Animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animated-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animated-card:hover {
+  animation: bounceIn 0.6s ease-out;
+}
+
+.floating-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Dark mode animations */
+@media (prefers-color-scheme: dark) {
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      #1e293b 25%,
+      #0f172a 50%,
+      #1e293b 75%
+    );
+    background-size: 200% 100%;
+  }
 }
 
 .card {
@@ -155,6 +349,18 @@ img {
 
 .card:hover {
   box-shadow: var(--shadow-md);
+}
+
+/* Dark mode card enhancements */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: var(--light-bg);
+    box-shadow: var(--shadow);
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 10px var(--sky-neon);
+  }
 }
 
 .badge {

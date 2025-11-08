@@ -18,7 +18,9 @@
     "lucide-react": "^0.548.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.5",
-    "vite": "^7.1.12"
+    "react-router-dom": "^7.9.5"
+  },
+  "devDependencies": {
+    "vite": "^7.2.2"
   }
 }
